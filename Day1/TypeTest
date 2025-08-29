@@ -1,0 +1,25 @@
+import java.lang.*;//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        boolean bool = true;        // false
+
+        byte b1 = 127;              //-128 ~ 127, 1byte
+        int i1 = Integer.MAX_VALUE; //32bit 4vyte
+        // 대문자로 시작하면 클래스
+        String s1 = "안녕하세요.";
+        //'': 문자, "" : 문자열
+
+        //System.out.println(bool);
+        System.out.println(s1);
+        
+        byte b2 = 100;
+        int i2 = 200;
+        double d2 = b2 + i2;    // 자동타입변환
+        //b2 = i2 + d2 (x)
+        i2 = (int)d2;       // 강제타입변환
+        
+    }
+}
