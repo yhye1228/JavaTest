@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // Q. 가로(width), 세로(height)를 입력받아
+        // 삼각형의 넓이(Area)를 구하는 프로그램을 작성하시오.
+//        int width, height;
+//        double area;
+//        // 키보드로 입력받기
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("width : ");
+//        //width = sc.nextInt();
+//        width = Integer.parseInt(sc.nextLine());
+//        System.out.println("height : ");
+//        //height = sc.nextInt();
+//        height = Integer.parseInt(sc.nextLine());
+//
+//        area = (double)(width*height) / 2;  // 정수*실수-->실수, 2와 2.0은 다름
+//
+//        System.out.println("삼각형의 넓이는 : " + area);
+
+        //Q 가로 세로 값을 입력받아 삼각형 넓이를 구하는
+        // java프로그램을 작성하세요.
+        // 단, area의 Type(자료형)은 double로 하세요.
+        int width, height;
+        double area;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("width : ");
+        width = Integer.parseInt(sc.nextLine());    // 키보드에 입력된 내용을 문자열로 넣고 좌측 변수에 저장
+        System.out.println("height : ");
+        height = Integer.parseInt(sc.nextLine());
+        //sc.nextLine() --> enter 키를 누르면 입력된 문자열을 읽음
+        area = (double)width*height/2;
+
+        System.out.println("삼각형의 넓이는 : "+area);
+    }
+}
