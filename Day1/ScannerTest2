@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main
+{
+    public static void main(String[] args)
+    {
+    //Q1 변수교환
+        //Scanner를 이용해서 두 수를 입력받습니다.
+
+        //a,b에 100,200받아 이들 값을 교환 해보세요.
+        //b<--200, a<--100 어떻게 코딩해야 할까?
+        int a, b;
+        Scanner sc = new Scanner(System.in);
+        a = Integer.parseInt(sc.nextLine());
+        b = Integer.parseInt(sc.nextLine());
+
+        System.out.println("A : " + a + " B : " + b);
+        //코딩
+        int temp;
+        temp = a;
+        a = b;
+        b = temp;
+        System.out.println("A : " + a + " B : " + b);
+    }
+}
