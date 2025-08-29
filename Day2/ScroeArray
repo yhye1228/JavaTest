@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int[] score = new int[3];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("성적입력 : ");
+
+        int total = 0;
+        double avg = 0;
+        for(int i = 0; i < score.length; i++){
+            score[i] = sc.nextInt();
+            total += score[i];
+        }
+        avg = (double)total/score.length;/******************/
+        System.out.printf("총점 : " + total);
+        System.out.println();
+        //String str = String.format("평균 : %2l.f", avg);
+        System.out.printf("평균 : %.2f", avg);
+    }
+}
