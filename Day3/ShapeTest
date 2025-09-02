@@ -1,0 +1,42 @@
+class Shape// abstrac : 추상적 클래스
+{
+    public void draw(){
+        System.out.println("도형을 그리다.");
+    }
+}
+class Rectangle extends Shape
+{
+    @Override//ctrl+o
+    public void draw() {
+        //super.draw();//부모클래스의 draw를 실행
+        System.out.println("사각형을 그리다.");
+    }
+}
+class Circle extends Shape
+{
+    @Override
+    public void draw() {
+        System.out.println("원을 그리다.");
+    }
+}
+class Triangle extends Shape
+{
+    @Override
+    public void draw() {
+        System.out.println("사각형을 그리다.");
+    }
+}
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+        Shape s = new Shape();
+        s.draw();
+        Rectangle rec = new Rectangle();
+        rec.draw();
+        Circle cir = new Circle();
+        cir.draw();
+        Triangle tri = new Triangle();
+        tri.draw();
+    }
+}
