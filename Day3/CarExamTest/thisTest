@@ -1,0 +1,33 @@
+// This 키워드
+class Car
+{
+    String model;
+    int speed;
+
+    Car(String model){
+        this.model = model;
+        //speed는 0으로 초기화
+    }
+    // 메소드
+    void setSpeed(int speed){
+        this.speed = speed;
+    }
+    void run(){
+        this.setSpeed(100);
+        System.out.println(this.model);
+        System.out.println(this.speed);
+    }
+}//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Car myCar = new Car("포르쉐");
+        Car yourCar = new Car("벤츠");
+
+        myCar.run();
+        yourCar.run();
+
+    }
+}
