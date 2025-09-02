@@ -5,6 +5,7 @@ public class Dog
     int age;
     String color;
     //2. 생성자 - 객체 초기화
+    //생성자를 두 개 이상 구현=> 생성자 오버로딩
     Dog()
     {
         this.name = "댕댕이";
