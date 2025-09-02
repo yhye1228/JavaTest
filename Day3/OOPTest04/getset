@@ -1,0 +1,57 @@
+//  생성자의 초기화와 생성자 오버로딩(OverLoading)
+public class Cat
+{
+    //1. 멤버변수
+    private String name;
+    private int age;
+    private String color;
+
+    //2. 생성자
+    public Cat() {
+    }
+
+    public Cat(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
+
+    public Cat(String name, int age, String color) {
+        this.name = name;
+        this.age = age;
+        this.color = color;
+    }
+    //getter, setter : 간접접근
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void Meow()
+    {
+        System.out.println("야옹~ 야옹");
+    }
+    public void Eat()
+    {
+        System.out.println("얌얌");
+    }
+
+}
