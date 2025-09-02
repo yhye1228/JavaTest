@@ -44,7 +44,7 @@ public class Cat
     public void setColor(String color) {
         this.color = color;
     }
-
+    //3. 메소드
     public void Meow()
     {
         System.out.println("야옹~ 야옹");
