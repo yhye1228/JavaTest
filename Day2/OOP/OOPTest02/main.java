@@ -7,7 +7,6 @@ public class Main
         Dog mary = new Dog();//객체 생성
 
         mary.name = "메리";// 생성 후 초기화
-        //생성자를 두 개 이상 구현=> 생성자 오버로딩
         System.out.println("메리의 이름 : " + mary.name);
         System.out.println("메리의 나이 : " + mary.age);
 //        String name = mary.name;
