@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        //정수 입력받기
+        Scanner sc = new Scanner(System.in);
+        System.out.println("0~100사이의 정수를 입력해주세요 : ");
+        int N = Integer.parseInt(sc.nextInt());
+
+        if(N >= 90 ){
+            System.out.println("A학점입니다.");
+        }else if(N >= 80) {
+            System.out.println("B학점입니다.");
+        }else if(N >= 70) {
+            System.out.println("C학점입니다.");
+        }else if(N >= 60) {
+            System.out.println("D학점입니다.");
+        }else{
+            System.out.println("F학점입니다.");
+        }
+
+    }
+}
