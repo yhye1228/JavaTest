@@ -1,0 +1,40 @@
+class Phone
+{
+    public String model;
+    public String color;
+    public Phone()
+    {
+        System.out.println("Phone() 생성자가 실행!");
+        model = "핸드폰";
+        color = "검은색";
+    }
+    public void run()
+    {
+        System.out.println("핸드폰이 동작한다.");
+    }
+}
+class SmartPhone extends Phone//상속
+{
+    public SmartPhone()
+    {
+        System.out.println("smartPhone() 생성자가 실행!");
+        this.model = "삼성";
+
+    }
+}
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        SmartPhone myPhone = new SmartPhone();
+        System.out.println(myPhone.color);
+        System.out.println(myPhone.model);// 자식에서 재정의하면 자식을 기준으로 출력
+        myPhone.run();// 은닉화
+        //=> 부모 실행 -> 자식 실행
+        // Phone() 생성자가 실행!
+        //smartPhone() 생성자가 실행!
+
+    }
+}
