@@ -7,7 +7,7 @@ public class Main
         //1~ 100까지 소수
         int cnt = 0; //flag변수 사용유무!!
         for(int i = 2; i <= 100; i++){
-            for(int j =2; j < i; j++){
+            for(int j = 2; j < i; j++){
                 if(i%j == 0){
                     cnt++;
                     break;/**************************************/
