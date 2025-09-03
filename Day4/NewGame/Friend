@@ -1,0 +1,10 @@
+package com.yeong.hero;
+
+public class Friend extends Hero{
+    public Friend() {
+        this.name = "샤오란";
+        this.job = "하녀";
+        this.hp = 50;
+    }
+
+}
