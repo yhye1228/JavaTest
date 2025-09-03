@@ -1,0 +1,5 @@
+package com.google.hero;
+
+public class Wizard extends Hero{
+
+}
