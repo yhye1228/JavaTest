@@ -1,0 +1,54 @@
+package com.yeong.hero;
+
+public abstract class Hero {
+    protected String name;
+    protected String job;
+    protected int age;
+    protected int hp;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getJob() {
+        return job;
+    }
+
+    public void setJob(String job) {
+        this.job = job;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    public Hero() {
+        this.name = "마오마오";
+        this.job = "약사";
+        this.age = 18;
+        this.hp = 99;
+    }
+
+    public Hero(String name, String job, int age, int hp) {
+        this.name = name;
+        this.job = job;
+        this.age = age;
+        this.hp = hp;
+    }
+}
