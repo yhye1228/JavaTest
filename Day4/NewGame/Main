@@ -1,0 +1,26 @@
+package com.yeong.base;
+/*후보 클래스
+Hero <-- abstarct Class 또는 Interface로 만드세요.
+Knight
+  - DarkKnight
+Wizard
+  - WhiteWizard
+Warior
+Story를 시작 스토리를 타이핑 효과를 주듯이 내용을 출력해 보세요.
+RPG게임을 한번 만들어 봅시다.
+*/
+
+
+import com.yeong.hero.Father;
+import com.yeong.hero.Hero;
+
+public class Main {
+    public static void main(String[] args) {
+        Story story = new Story();
+        story.initStoryWrite();
+
+        Father papa = new Father();
+        System.out.println("주인공 아버지 이름 : "+papa.getName());
+
+    }
+}
