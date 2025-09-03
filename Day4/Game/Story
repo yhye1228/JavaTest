@@ -1,0 +1,18 @@
+package com.google.base;
+
+public class Story {
+    public void initStoryWrite(){
+        String gameStory = " ";
+
+        try {
+            Thread.sleep(60);
+            System.out.println("story1");
+            Thread.sleep(60);
+            System.out.println("story2");
+            Thread.sleep(60);
+            System.out.println("story3");
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
