@@ -1,0 +1,40 @@
+interface Vehicle{
+    void run();
+}
+
+class Bus implements Vehicle{
+    //alt+enter
+    @Override
+    public void run() {
+        System.out.println("버스가 달립니다.");
+    }
+}
+class Taxi implements Vehicle{
+    //alt+enter
+    @Override
+    public void run() {
+        System.out.println("택시가 달립니다..");
+    }
+}
+class Subway implements Vehicle{
+    //alt+enter
+    @Override
+    public void run() {
+        System.out.println("지하철이 달립니다.");
+    }
+}
+class Driver{
+
+}
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+        Bus b = new Bus();
+        b.run();
+        Taxi t = new Taxi();
+        t.run();
+        Subway s = new Subway();
+        s.run();
+    }
+}
