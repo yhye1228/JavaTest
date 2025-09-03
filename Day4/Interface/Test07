@@ -1,0 +1,44 @@
+interface Vehicle{
+    void run();
+}
+
+class Bus implements Vehicle{
+    //alt+enter
+    @Override
+    public void run() {
+        System.out.println("버스가 달립니다.");//강제로 재정의
+    }
+}
+class Taxi implements Vehicle{
+    //alt+enter
+    @Override
+    public void run() {
+        System.out.println("택시가 달립니다..");
+    }
+}
+class Subway implements Vehicle{
+    //alt+enter
+    @Override
+    public void run() {
+        System.out.println("지하철이 달립니다.");
+    }
+}
+//운전자 클래스
+class Driver{
+    public void dirve(Vehicle v){// 최상위 부모를 적기, 업캐스팅
+        v.run();
+    }
+}
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+        Driver tom = new Driver();
+
+        Bus bus1 = new Bus();
+        Taxi taxi1 = new Taxi();
+
+        //tom.dirve(bus1);
+        tom.dirve(taxi1);
+    }
+}
