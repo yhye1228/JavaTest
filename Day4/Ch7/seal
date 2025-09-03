@@ -1,0 +1,26 @@
+//Sealedj~ permits
+// 자식클래스의 무분별한 상속을 제한
+// 상속받은 자녀는 모두 final을 붙여야 한다.
+//non-sealed -> 상속가능
+sealed class Person permits Employee, Manager{
+
+}
+non-sealed class Employee extends Person{
+
+}
+class S extends Employee {
+}
+final class Manager extends Person{
+
+}
+//class A extends Manager {
+//}
+//class B extends Manager {
+//}
+// TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
