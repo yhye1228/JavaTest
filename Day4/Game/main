@@ -1,0 +1,13 @@
+package com.google.base;
+
+import com.google.hero.Knight;
+
+public class Main {
+    public static void main(String[] args) {
+//        Hero hero = new Hero();
+        Story story = new Story();
+
+        Knight joy = new Knight("조이");
+        System.out.println("기사의 이름 : " + joy.getName());
+    }
+}
