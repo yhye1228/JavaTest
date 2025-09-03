@@ -1,0 +1,31 @@
+class Horse {
+    public void run() {
+        System.out.println("말처럼 달리다.");
+    }
+}
+interface IWing{
+    public void fly();  // 함수선언만 가능
+}
+interface IversionChina{
+    
+}
+interface IversionJapan{
+    
+}
+//Interface : 버전별로 갈아끼우기 양호
+class Unicon extends Horse implements IWing, IversionChina{
+
+    @Override
+    public void fly() {
+        System.out.println("새처럼 날다.");
+    }
+}
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+        Unicon unicon = new Unicon();
+        unicon.run();
+        unicon.fly();
+    }
+}
