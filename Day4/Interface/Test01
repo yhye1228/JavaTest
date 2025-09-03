@@ -1,0 +1,26 @@
+class Horse{
+    public void run(){
+        System.out.println("말처럼 달리다.");
+    }
+}
+interface Flyable{
+    public void fly();
+}
+class Angle{
+
+}
+class Unicon extends Horse implements Flyable{
+    //alt+enter=> 메소드 정의
+    @Override
+    public void fly() {
+        System.out.println("새처럼 날다");
+    }
+}//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+        Unicon unicon = new Unicon();
+        unicon.fly();
+        unicon.run();
+    }
+}
