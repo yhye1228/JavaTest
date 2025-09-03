@@ -1,0 +1,4 @@
+package com.yeong.hero;
+
+public class Queen extends Hero{
+}
