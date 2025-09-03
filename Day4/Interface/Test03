@@ -1,0 +1,47 @@
+public class A {
+    static int max = 55;
+}
+//다른 언어들은 추상 메소드를 통해서 재정의를 강제하는데
+abstract class B{
+    public void method1(){
+        System.out.println("나는 클래스B");
+    }
+}
+class C extends B{
+    @Override
+    public void method1() {
+        super.method1();
+    }
+}
+//interface의 메소드를 통해서 재정의를 강제한다.
+interface RemoteControl{
+    //변수
+    int MAX_VALUE = 10; //public : 은닉화
+    int MIN_VALUE = 0;
+    
+    //메소드
+    void turnOn();
+    void turnOff();
+}
+//interface가 가진 메소드를 모두 재정의 해야 한다.
+class TV implements RemoteControl{
+
+    @Override
+    public void turnOn() {
+
+    }
+
+    @Override
+    public void turnOff() {
+
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(A.max);
+        System.out.println(RemoteControl.MAX_VALUE);
+        System.out.println(RemoteControl.MIN_VALUE);
+
+        //B b = new B;
+    }
+}
