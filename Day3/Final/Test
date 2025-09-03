@@ -1,12 +1,12 @@
 class Member// class에 final 테스트
 {
-    final public void run(){// 1. 메소드에 final을 붙이면 재정의 불가
+    final public void run(){// 2. 메소드 : 재정의 불가
     }
 }
-class VIP extends Member // 2. 상속을 못하게 만드는 키워드
+class VIP extends Member // 1. 클래스 : 상속을 못하게 만드는 키워드
 {
     // 멤버 선언
-    public final int number = 100;  // 3. 변수에 final 붙이면 상수가 되어서 변경 불가!!
+    public final int number = 100;  // 3. 변수 : 상수가 되어서 변경 불가!!
     // number = 200;(X)
     public void test(){
         // number = 200; // Error
