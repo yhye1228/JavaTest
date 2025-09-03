@@ -1,0 +1,9 @@
+package com.yeong.hero;
+
+public class King extends Hero{
+    public King() {
+        this.name = "화요양";
+        this.job = "황제";
+        this.hp = 200;
+    }
+}
