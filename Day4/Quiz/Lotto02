@@ -1,0 +1,43 @@
+import java.util.Random;
+// 중복불허, 정렬
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int[] num = new int[6];
+        //중복불허
+        for(int i=0; i < 6; i++){
+            num[i] = (random.nextInt(45))+1;
+            for(int j=1; j < i; j++){
+                if(num[i] == num[j]){
+                    int temp = (random.nextInt(45))+1;
+                    //중복확인
+                }
+            }
+            //System.out.print(num[i] + " ");
+        }
+        // 정렬
+        for(int m = 0; m < 6; m++){
+            for(int n = m+1; n < 6; n++){
+                if(num[m] > num[n]){
+                    int temp = num[m];
+                    num[m] = num[n];
+                    num[n] = temp;
+                }
+            }
+            System.out.print(num[m] + " ");
+        }
+//        for(int l = 0; l < 6 ; l++){
+//            System.out.print(num[l] + " ");
+//        }
+        System.out.println();
+        int Bonus = (random.nextInt(45))+1;
+        for(int k = 0; k < 6; k++){
+            if(Bonus == num[k]){
+                Bonus = (random.nextInt(45))+1;
+            }
+        }
+        System.out.println(Bonus);
+    }
+}
