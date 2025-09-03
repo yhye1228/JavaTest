@@ -1,0 +1,45 @@
+abstract class Car{
+    protected String brand;
+    protected int speed;
+    protected String color;
+    //=> 상속하는 경우만 사용가능
+
+    public Car() {
+        System.out.println("Car() 생성자 호출");
+    }
+    public void run(){
+        System.out.println("달리다.");
+    }
+}
+class SuperCar extends Car{
+    String name;
+    public SuperCar() {
+        System.out.println("SuperCar() 생성자 호출");
+    }
+    public void boosterRun(){
+        System.out.println("부스터를 이용해 달리다.");
+    }
+    //은닉화(메소드)
+//    @Override
+//    public void run() {
+//        super.run();
+//    }
+}
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+
+public class Main {
+    public static void main(String[] args) {
+        //Car car = new Car();->추상화 시키면 실제로 존재하지 않으므로 클래스를 new 할 수 없다.
+        SuperCar sCar = new SuperCar();
+        //부모호출 -> 자식호출
+        //Car() 생성자 호출
+        //SuperCar() 생성자 호출
+        Car car2 = new SuperCar();  //부모기능만 사용가능
+        //car2.boosterRun(); //사용불가 --> 부모기능만 사용가능
+        /* 해결방법 */
+        SuperCar sCar2 = (SuperCar)car2;
+        sCar2.boosterRun();
+        ((SuperCar)car2).boosterRun();
+    }
+}
