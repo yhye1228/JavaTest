@@ -1,0 +1,10 @@
+package com.yeong.hero;
+
+public class SubHero extends Hero{
+    public SubHero() {
+        this.name = "진시";
+        this.job = "환관";
+        this.age = 19;
+        this.hp = 101;
+    }
+}
