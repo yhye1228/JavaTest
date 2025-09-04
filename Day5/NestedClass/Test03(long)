@@ -49,17 +49,17 @@ public class Main {
         // 중첩클래스 생성
         A.B b = a.new B();         //B객체 생성
         b.field1 = 100;
-        A.B.field2 = 200;
+        A.B.field2 = 200;/**정적 변수 호출************************************/
         System.out.println(b.field2);
         b.method1();
         System.out.println(b.field1);
 
         // 정적 맴버 클래스
-        A.C c = new A.C();
+        A.C c = new A.C();/**정적 클래스 호출************************************/
         c.field1 = 3;
         c.method();
-        A.C.field2 = 7;
-        A.C.method2();
+        A.C.field2 = 7;/**정적 변수 호출************************************/
+        A.C.method2();/**정적 메소드 호출************************************/
 
         //로컬 클래스 동작
         a.method();
