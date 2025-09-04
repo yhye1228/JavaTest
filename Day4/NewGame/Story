@@ -33,13 +33,13 @@ public class Story {
         typeWriter("후사를 많이 남기기 위해 후궁은 커졌고", delay);
         typeWriter("그 커진 후궁에는 일손도 많이 필요했다.", delay);
         System.out.println();
-        typeWriter("도성의 유명 유곽 녹청관 안에서 약방을", delay);
-        typeWriter("운영하던 뤄먼과 그의 딸 마오마오.", delay);
+        typeWriter("도성의 유명 유곽 녹청관 안에서", delay);
+        typeWriter("약방을 운영하던 뤄먼과 그의 딸 마오마오.", delay);
         typeWriter("소녀들의 인신매매가 쉽게 이루어지는 도성에서", delay);
         typeWriter("마오마오는 일부러 못난 화장을 하고", delay);
         typeWriter("밖으로 돌아다니고 있었다.", delay);
         System.out.println();
-        typeWriter("화장이 옅어진 어느 날.", delay);
+        typeWriter("화장이 옅어진 어느 날...", delay);
         typeWriter("인신매매를 당해 후궁의 어딘가로 가게되고,", delay);
         typeWriter("아버지에게 연락도 못할 채", delay);
         typeWriter("빨래터에서 일하게 된다.", delay);
