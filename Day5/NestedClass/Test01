@@ -1,0 +1,18 @@
+class A{
+    class B{
+
+    }
+    interface C{
+
+    }
+}
+class View {
+    public interface OnClickListner{
+        public void onClick(View v);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        A a = new A();
+    }
+}
