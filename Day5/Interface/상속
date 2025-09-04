@@ -1,0 +1,26 @@
+interface interfaceA{
+    void methodA();
+}
+interface interfaceB{
+    void methodB();
+}
+interface interfaceC extends interfaceA, interfaceB{
+    //인터페이스간에 상속받으면 메소드를 강제 구현하지 않아도 된다.
+}
+class Test implements interfaceC{
+    //구현받은 인터페이스가 상속받은 메소드는 강제 구현해야 한다.
+    @Override
+    public void methodA() {
+
+    }
+
+    @Override
+    public void methodB() {
+
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+    //생성
+    }
+}
