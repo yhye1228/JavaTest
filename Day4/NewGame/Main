@@ -13,14 +13,37 @@ RPG게임을 한번 만들어 봅시다.
 
 import com.yeong.hero.Father;
 import com.yeong.hero.Hero;
+import com.yeong.hero.King;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Story story = new Story();
-        story.initStoryWrite();
+        story.initStoryWrite(50);//default = 50, 특정버튼 누르면 0또는 1로 변경하기(인터럽트??)
+        
+        //"서사" 엔터 눌러서 스킵하기
 
-        Father papa = new Father();
-        System.out.println("주인공 아버지 이름 : "+papa.getName());
+        //번호로 등장인물 선택하기
+        System.out.println("원하는 등장인물을 번호로 선택해주세요.");
+        System.out.println("1.황제 2.후궁(랜덤) 3.마오마오 4.진시 5.뤄먼(아버지) 6.시녀(랜덤) ");
+        System.out.println("번호입력 : ");
+        Scanner sc1 = new Scanner(System.in);
+        int num = sc1.nextInt();
+        switch(num){
+            case 1:
+                King king = new King();
+                System.out.println("황제를 선택하였습니다.");
+                System.out.print("이름을 입력해주세요 : ");
+                Scanner sc2 = new Scanner(System.in);
+                String name = sc2.nextLine();
+                System.out.println("당신의 이름은 " +name + " 입니다.");
+                System.out.println("나이 : " + king.getAge());
+                System.out.println("직업 : " + king.getJob());
+                System.out.println("체력 : " + king.getHp());
+        }
+//        Father papa = new Father();
+//        System.out.println("주인공 아버지 이름 : "+papa.getName());
 
     }
 }
