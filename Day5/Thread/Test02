@@ -31,6 +31,6 @@ public class Main {
         NumberThread nt = new NumberThread();
         Thread t = new Thread(nt);/**********************************************************/
         t.start();
-        //=> 출력이 섞임
+        //=> 병렬 실행이라 출력이 섞임
     }
 }
