@@ -1,0 +1,29 @@
+
+class Test extends Thread{
+    @Override
+    public void run() {
+        String name = Thread.currentThread().getName();
+        System.out.println("Test Thread에서 실행중 : " + name);
+    }
+}
+class Test2 implements Runnable{
+    //Runnable : Thread의 인터페이스
+    @Override
+    public void run() {
+        String name = Thread.currentThread().getName();
+        System.out.println("Test2 클래스에서 실행중 : " + name);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Test t = new Test();
+        t.start();
+
+        Test2 t2 = new Test2();
+        Thread tt = new Thread(t2);
+        tt.start();
+        
+        String name = Thread.currentThread().getName();
+        System.out.println("Main함수에서 실행중 : " + name);
+    }
+}
