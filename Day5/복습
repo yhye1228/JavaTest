@@ -1,0 +1,53 @@
+abstract class Mammal{//상속받아야 메소드 사용 가능
+    abstract public void eat(); //자식 클래스에 강제로 구현하게 만든다.
+}
+interface Flyable{              //형용사
+    void fly();
+}
+interface Runable{
+    void run();//public static 생략되어 있다.
+}
+class Lion extends Mammal implements Flyable, Runable{  //다중상속이 안됨->인터페이스는 다중구현 가능
+
+    @Override
+    public void eat() {
+        
+    }
+
+    @Override
+    public void fly() {
+        
+    }
+
+    @Override
+    public void run() {
+
+    }
+}
+class Tiger extends Mammal implements Flyable, Runable{
+
+    @Override
+    public void eat() {
+        
+    }
+
+    @Override
+    public void fly() {
+        
+    }
+
+    @Override
+    public void run() {
+
+    }
+}
+
+
+
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
