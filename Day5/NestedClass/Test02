@@ -1,0 +1,33 @@
+class A{
+    // 중첩 클래스(O)
+    class B{
+        int field1;
+        static int field2;
+        void method1(){
+            System.out.println("B클래스의 method1");
+        }
+    }
+    //정적 클래스(0)
+    static class C{
+
+    }
+    /// 로컬 클래스 , 메소드 안에 들어있는 클래스
+    void method(){
+        //로컬 클래스
+        class D{
+
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        A a = new A();
+
+        // 중첩클래스 생성
+        A.B b = a.new B();         //B객체 생성
+        b.field1 = 100;
+
+        b.method1();
+        System.out.println(b.field1);
+    }
+}
