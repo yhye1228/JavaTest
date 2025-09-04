@@ -5,6 +5,7 @@
 
 도구
 - Intellij Commnity Version(Free)
+
 -jdk - Open JDK(x)
        - Oracle JDK21(x64 MSI Installer)(o) : Long-Term Support (LTS) 
        - 설치순서
