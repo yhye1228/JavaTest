@@ -10,12 +10,12 @@ interface Runable{
 class Lion extends Mammal implements Flyable, Runable{  //다중상속이 안됨->인터페이스는 다중구현 가능
 
     @Override
-    public void eat() {
+    public void eat() {    //abstract method는 강제 구현되어야 한다.
         
     }
 
     @Override
-    public void fly() {
+    public void fly() {    // interface method도 abstract method처럼 강제 구현된다.
         
     }
 
