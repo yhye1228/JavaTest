@@ -12,9 +12,9 @@ public class Main {
             System.out.println("A학점입니다.");
         }else if(N >= 80 && N <= 89) {
             System.out.println("B학점입니다.");
-        }else if(N >= 70) {
+        }else if(N >= 70 && N <= 79) {
             System.out.println("C학점입니다.");
-        }else if(N >= 60) {
+        }else if(N >= 60 && N <= 69) {
             System.out.println("D학점입니다.");
         }else{
             System.out.println("F학점입니다.");
