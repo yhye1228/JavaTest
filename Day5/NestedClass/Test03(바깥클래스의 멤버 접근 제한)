@@ -1,0 +1,42 @@
+//바깥 필드와 메소드에서 사용 제한
+class A{
+    //Instance 멤버 변수
+    /* 내부 클래스의 객체화 가능 */
+    B field1 = new B();
+    C field2 = new C();
+
+    //Instance 메소드
+    void method(){
+        B var1 = new B();
+        C var2 = new C();
+    }
+
+    //static 멤버 변수 초기화
+    //static B field3 = new B(); //Error
+    static C field4 = new C();
+
+    //static 메소드
+    static void method2(){
+        //B var1 = new B(); --> Instance 멤버 클래스의 메소드 사용불가
+        C var2 = new C();   // static 메소드에 static 클래스 생성 가능
+    }
+
+    //Instance 멤버 클래스
+    class B{
+        
+    }
+    //static 멤버 클래스
+    static class C{
+        
+    }
+}
+
+
+
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
