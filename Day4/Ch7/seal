@@ -1,4 +1,4 @@
-//Sealedj~ permits
+//Sealed~ permits
 // 자식클래스의 무분별한 상속을 제한
 // 상속받은 자녀는 모두 final을 붙여야 한다.
 //non-sealed -> 상속가능
