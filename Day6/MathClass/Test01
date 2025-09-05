@@ -1,0 +1,19 @@
+import java.lang.Math;
+import java.util.Random;
+
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+
+//        double value = Math.PI;
+//        double value2 = Math.pow(2, 8); //2의 8제곱
+//        double value3 = Math.sqrt(9);   //9의 제곱근
+
+//        System.out.println(value2);
+//        System.out.println(value3);
+
+        int num = (int) (Math.random());
+        System.out.println(num);
+    }
+}
