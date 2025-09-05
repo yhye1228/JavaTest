@@ -1,0 +1,14 @@
+class Employee{
+
+}
+public class Main {
+    public static void main(String[] args) {
+        Employee emp;           //래퍼런스
+
+        emp = new Employee();   //객체 --> 인스턴스(Instance)
+        emp = null;             //포인트 주소가 삭제됨.
+        emp = new Employee();   //다른 객체
+
+        System.gc();            //가비지 컬렉터를 실행시켜줘~
+    }
+}
