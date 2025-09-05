@@ -1,0 +1,15 @@
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+        String str = "안녕하세요";          //객체이므로 주소가 들어간다.
+        // UTF-8 한글은 3bytes이다.
+        //int a = 100; --> 값이 들어감.
+        //Object obj = new Object();    //주소가 들어감
+
+        byte[] bytes1 = str.getBytes(); // 문자열을 byte로 변환하여 byte 배열에 담았다.
+        System.out.println("bytes1.length : " + bytes1.length);
+        String str1 = new String(bytes1);   //String 생성자를 통해서 bytes -> String
+        System.out.println("bytes1->String : " + str1);
+    }
+}
