@@ -1,11 +1,14 @@
-
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
 public class Main {
     public static void findClass1() throws ClassNotFoundException {
         Class clszz = Class.forName("java.lang.Math7");
     }
-    public static void findClass2() throws ClassNotFoundException {
-        int[] n = new int[3];
-        n[3] = 5;
+    public static void findClass2() throws ArrayIndexOutOfBoundsException{
+        int[] arr = new int[3];
+        arr[3] = 5;
+
+        System.out.println(arr[3]);
     }
 
     public static void main(String[] args) {
@@ -16,7 +19,5 @@ public class Main {
             System.out.println(e.getMessage());
             System.out.println("클래스를 찾지 못하는 예외가 발생하였습니다.");
         }
-        int n = (int)(Math.sqrt(25)-1)/2;
-        System.out.println(n);
     }
 }
