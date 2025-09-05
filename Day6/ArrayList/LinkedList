@@ -1,0 +1,23 @@
+import java.util.LinkedList;
+import java.util.List;
+
+public class Test03 {
+    public static void main(String[] args) {
+        List<String> list = new LinkedList<>();
+
+        list.add("대전");
+        list.add("세종");
+        list.add("서울");
+
+        for(String s : list){
+            System.out.print(s + " ");
+        }
+        System.out.println();
+
+        list.add(2, "인천");
+        list.remove(1);
+        for(String s : list){
+            System.out.print(s + " ");
+        }
+    }
+}
