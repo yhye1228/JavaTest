@@ -1,0 +1,18 @@
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+
+        try{
+            Class clazz = Class.forName("java.lang.Math2");
+            System.out.println("정상 수행 되었습니다.");
+        }catch(ClassNotFoundException ex){                          // 구체적인 예외 먼저 작성하기
+            System.out.println("클래스를 찾지 못해 예외가 발생하였습니다.");
+        }catch (Exception e){
+            System.out.println("예외가 발생하였습니다.");
+        }finally {
+            System.out.println("[마무리 실행]\n");
+        }
+
+    }
+}
