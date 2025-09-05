@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test02 {
+    public static void main(String[] args) {
+        List<String> fruits = new ArrayList<>();
+        fruits.add("수박");
+        fruits.add("사과");
+        fruits.add("참회");
+        fruits.add("메론");
+        fruits.add("복숭아");
+        fruits.add("바나나");
+
+        fruits.remove("메론");
+
+        for(String item : fruits){
+            System.out.println(item);
+        }
+        boolean tf = fruits.contains("사과");
+        System.out.println("사과 존재 여부 : " + tf);
+
+    }
+}
