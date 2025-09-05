@@ -1,0 +1,26 @@
+class Box{
+    private Object object;
+    public void set(Object object){
+        this.object = object;
+    }
+    public Object get(){
+        return object;
+    }
+}
+class Apple{
+
+}
+public class Main {
+    public static void main(String[] args) {
+        Box box = new Box();
+        box.set("홍길동");
+        String name = (String)box.get();
+        System.out.println(name);
+        //System.out.println(box.get());
+
+//        Apple apple = new Apple();
+//        box.set(apple);
+        box.set(new Apple());   //익명 클래스
+        Apple apple2 = (Apple)box.get();
+    }
+}
