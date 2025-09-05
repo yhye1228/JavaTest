@@ -13,7 +13,8 @@ public class Main {
 //        System.out.println(value2);
 //        System.out.println(value3);
 
-        int num = (int) (Math.random());
+        Random random = new Random();
+        int num = random.nextInt(45)+1;
         System.out.println(num);
     }
 }
