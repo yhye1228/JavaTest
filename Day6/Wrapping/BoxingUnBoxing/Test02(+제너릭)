@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+        // Boxing
+        int num = 18;
+        Integer boxedNum = Integer.valueOf(num);    // 명시적 Boxing
+        Integer autoBoxingNum1 = num;               // auto Boxing
+
+        // UnBoxing
+        Integer obj = Integer.valueOf(20);    // Boxing
+        int unboxNum = obj.intValue();          // 명시적 UnBoxing
+        int autoUnboxNum = obj;                 // auto UnBoxing
+
+        // 사용이유, 제너릭 클래스만 사용(C++은 다름)
+        ArrayList<Integer> list = new ArrayList<>();    //추가할 때마다 크기가 늘어남(배열보다 유용함)
+        //ArrayList<int>    //error 제너릭은 클래스 타입만 들어간다.
+        list.add(5);
+        list.add(10);
+    }
+}
