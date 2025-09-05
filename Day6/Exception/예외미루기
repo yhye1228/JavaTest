@@ -1,0 +1,22 @@
+
+public class Main {
+    public static void findClass1() throws ClassNotFoundException {
+        Class clszz = Class.forName("java.lang.Math7");
+    }
+    public static void findClass2() throws ClassNotFoundException {
+        int[] n = new int[3];
+        n[3] = 5;
+    }
+
+    public static void main(String[] args) {
+        try {
+            findClass1();
+            findClass2();
+        } catch (ClassNotFoundException e) {
+            System.out.println(e.getMessage());
+            System.out.println("클래스를 찾지 못하는 예외가 발생하였습니다.");
+        }
+        int n = (int)(Math.sqrt(25)-1)/2;
+        System.out.println(n);
+    }
+}
