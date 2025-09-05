@@ -17,7 +17,9 @@ public class Main {
         // 사용이유, 제너릭 클래스만 사용(C++은 다름)
         ArrayList<Integer> list = new ArrayList<>();    //추가할 때마다 크기가 늘어남(배열보다 유용함)
         //ArrayList<int>    //error 제너릭은 클래스 타입만 들어간다.
-        list.add(5);
-        list.add(10);
+        list.add(5);    // auto boxing 
+        list.add(10);   // auto boxing
+        int value = list.get(0); // auto unboxing
+        System.out.println(value);  //출력결과 : 5
     }
 }
