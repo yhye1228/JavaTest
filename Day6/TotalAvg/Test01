@@ -4,21 +4,30 @@ import java.util.Scanner;
 // 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
 public class Main {
     public static void main(String[] args) {
+        //1. 변수선언, 입력부
         int[] score = new int[3];
+        int total = 0;                              // 0으로 초기화 시켜야 되는 변수 카운터, 합
+        double avg;
+        //1.5 입력부
         Scanner sc = new Scanner(System.in);
-        System.out.print("영어점수를 입력해주세요 : ");
-        score[0] = sc.nextInt();
-        System.out.print("국어점수를 입력해주세요 : ");
-        score[1] = sc.nextInt();
-        System.out.print("수학점수를 입력해주세요 : ");
-        score[2] = sc.nextInt();
-        //총점구하기
-        int total = 0;
-        for(int num : score){
-            total += num;
+        System.out.println("점수를 입력해주세요. ");
+        for(int i = 0; i < 3; i++){
+            score[i] = sc.nextInt();                // 입력할 만큼 호출하기
+            //총점
+            total += score[i];
         }
-        double avg = (double) total/score.length;
+//        System.out.print("영어점수를 입력해주세요 : ");
+//        score[0] = sc.nextInt();
+//        System.out.print("국어점수를 입력해주세요 : ");
+//        score[1] = sc.nextInt();
+//        System.out.print("수학점수를 입력해주세요 : ");
+//        score[2] = sc.nextInt();
+        //2. 수식
+        // 평균구하기
+        avg = (double) total/score.length;          // avg = total/ 3.0;
+        //3. 출력
         System.out.println("총점 : "+ total);
-        System.out.printf("평균 : %.2f\n",avg);
+        System.out.printf("평균 : %.2f\n", avg);     // f : float
+        
     }
 }
