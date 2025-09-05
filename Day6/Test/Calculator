@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+//계산기 클래스를 만들어서 4칙연산을 메인함수에서 수행해 주세요.
+
+class Calculator{
+    //계산기
+
+    //멤버 메소드
+    public int Plus(int a, int b){
+        return a + b;
+    }
+    public int Minus(int a, int b){
+        return a - b;
+    }
+    public int Mutiple(int a, int b){
+        return a * b;
+    }
+    public double Divide(int a, int b){
+        return (double) a / b;
+    }
+
+}
+
+public class Main {
+    public static void main(String[] args) {
+        //4칙연산을 수행
+        Calculator calc = new Calculator();
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println("덧셈 : " + calc.Plus(a, b));
+        System.out.println("뺄셈 : " + calc.Minus(a, b));
+        System.out.println("곱셈 : " + calc.Mutiple(a, b));
+        System.out.printf("나눗셈 : %.2f", calc.Divide(a, b));
+    }
+}
