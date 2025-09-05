@@ -1,0 +1,26 @@
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+public class Main {
+    public static void main(String[] args) {
+        int a = 100;    //Type(자료형) - int
+        Integer obj = 200;  //Boxing
+        //Type(자료형)  - class Integer --> Wrapper(int)
+
+        a = obj;    //UnBoxing(자동 언박싱) 너무나 많이 사용되어서 Java에서 특별히 되도록 만든 구조!!
+        System.out.println(a);
+        /*************************************************************/
+        Integer obj2= 300;  //Boxing
+        int b = obj2;       //UnBoxing
+        System.out.println(obj2);
+        System.out.println(b);
+        System.out.println("박싱 언박싱 값 비교 : " + (obj2 == b));
+        //박싱 언박싱 값 비교 : true
+        /*************************************************************/
+        Integer obj3 = 500;
+        Integer obj4 = 500;
+        System.out.println("래퍼런스가 가지고 있는 주소값 비교 : " + (obj3 == obj4));   // => false : 주소가 다르다.
+        //래퍼런스가 가지고 있는 주소값 비교 : false
+        System.out.println("최종값이 같은지 여부 : " + obj3.equals(obj4));  // => 값이 같은지 비교
+        //최종값이 같은지 여부 : true
+    }
+}
