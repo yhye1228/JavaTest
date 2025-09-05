@@ -1,0 +1,48 @@
+class Product{
+    //~~~ 코딩
+    //멤버는 자유스럽게 2개정도 만들어 보세요~~~!
+    private int productID = 1;
+    private String productName = "자두";
+    //생성자를 2개 이상 만드세요.
+    //alt + ins
+    public int getProductID() {
+        return productID;
+    }
+
+    public void setProductID(int productID) {
+        this.productID = productID;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public Product() {
+
+    }
+    public Product(int productID) {
+        this.productID = productID;
+    }
+
+    public Product(String productName) {
+        this.productName = productName;
+    }
+    //후보 productID, barcodeNumber, productName ... 등등
+}
+public class Main {
+    public static void main(String[] args) {
+        // Product 클래스를 만들어 테스트 해 보세요.
+        Product pd1 = new Product();
+        Product pd2 = new Product(2);
+        Product pd3 = new Product("브레드");
+        // Getter, Setter도 만들어 보세요.
+        System.out.println("상품 아이디 : " + pd1.getProductID());
+        System.out.println("상품 명 : " + pd1.getProductName());
+        System.out.println("상품2 : " + pd2.getProductID());
+        System.out.println("상품3 : " + pd3.getProductName());
+    }
+}
