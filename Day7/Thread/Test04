@@ -1,3 +1,4 @@
+// 양보
 class AThread extends Thread{
     @Override
     public void run(){
