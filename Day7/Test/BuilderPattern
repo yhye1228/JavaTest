@@ -1,0 +1,55 @@
+class Person
+{
+    private String name;
+    private int age;
+    private String address;
+    private String phoneNumber;
+
+    public Person(PersonBuilder personBuilder) {
+        this.name = personBuilder.name;
+        this.age = personBuilder.age;
+        this.address = personBuilder.address;
+        this.phoneNumber = personBuilder.phoneNumber;
+    }
+
+    //Builder 패턴 --> 매개변수가 8자리 이상이면 기억을 잘 못한다.
+    public static class PersonBuilder
+    {
+        private String name;
+        private int age;
+        private String address;
+        private String phoneNumber;
+
+        public PersonBuilder(String name, int age){
+            this.name = name;
+            this.age = age;
+        }
+
+        public PersonBuilder setAddress(String address){
+            this.address = address;
+            return this;
+        }
+
+        public PersonBuilder setPhoneNumber(String phoneNumber){
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+
+        public Person build(){
+            return new Person(this);
+        }
+    }
+
+}
+
+
+
+public class Main
+{
+    public static void main(String[] args) {
+        Person person = new Person.PersonBuilder("홍길동", 22)
+                .setAddress("서울 종로구 888")
+                .setPhoneNumber("010-1234-1234")
+                .build();
+    }
+}
