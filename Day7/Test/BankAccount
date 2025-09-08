@@ -37,7 +37,7 @@ class BankAccount{
         System.out.printf("%.0f원 출금완료, ", amount);
         System.out.printf("현재잔액 : %.0f원\n", balance);
     }
-    public void getBalance(){
+    public void getBalance(){//getter 이용 가능
         System.out.printf("현재잔액 : %.0f원", balance);
     }
 
