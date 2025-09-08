@@ -48,7 +48,7 @@ public class Main
         animal = new Cow();
         arlist.add(animal);
         for(Animal ani : arlist){/**************************************************************************/
-            ani.makeSound();
+            ani.makeSound();/**************************************************************************/
         }
     }
 
