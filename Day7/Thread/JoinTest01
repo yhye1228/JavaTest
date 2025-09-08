@@ -28,7 +28,7 @@ public class Main {
         // 기초 스레드 동기화!!!
         try {
             st.join();
-            st.setDaemon(true); // 혹시 main 스레드가 종료되면 해당 스레드도 같이 종룔
+            st.setDaemon(true); // 혹시 main 스레드가 종료되면 해당 스레드도 같이 종료
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
