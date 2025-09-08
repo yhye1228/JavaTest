@@ -35,7 +35,7 @@ public class Main
         arlist.add(animal);
         animal = new Cow();
         arlist.add(animal);
-        for(Animal ani : arlist){
+        for(Animal ani : arlist){/**************************************************************************/
             ani.makeSound();
         }
     }
