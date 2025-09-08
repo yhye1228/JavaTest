@@ -1,0 +1,30 @@
+class BankAccount{
+    private String accountHolder;   // 예금주
+    private double balance;         // 잔액
+
+    // 메소드
+    public void deposit(double amount){ // 입금
+        balance += amount;
+        System.out.printf("%.0f원 입금완료, ", amount);
+
+        System.out.printf("현재잔액 : %.0f원\n", balance);
+    }
+    public void withdraw(double amount){ // 출금
+        balance -= amount;
+        System.out.printf("%.0f원 출금완료, ", amount);
+        System.out.printf("현재잔액 : %.0f원\n", balance);
+    }
+    public void getBalance(){
+        System.out.printf("현재잔액 : %.0f원", balance);
+    }
+
+}
+
+public class Main {
+    public static void main(String[] args) {
+        BankAccount ba = new BankAccount();
+        ba.deposit(5000);
+        ba.withdraw(2000);
+        ba.getBalance();
+    }
+}
