@@ -27,6 +27,7 @@ class BankAccount{
     // 메소드
     public void deposit(double amount){ // 입금
         balance += amount;
+//System.out.println((int) balance + "원 입금완료");/*************************************************************/
         System.out.printf("%.0f원 입금완료, ", amount);
 
         System.out.printf("현재잔액 : %.0f원\n", balance);
