@@ -26,19 +26,26 @@ class BankAccount{
 
     // 메소드
     public void deposit(double amount){ // 입금
-        balance += amount;
-//System.out.println((int) balance + "원 입금완료");/*************************************************************/
-        System.out.printf("%.0f원 입금완료, ", amount);
-
-        System.out.printf("현재잔액 : %.0f원\n", balance);
+        this.balance += amount;
+        System.out.print((int) amount + "원 입금완료, ");
+        System.out.println("현재잔액 : " + (int)balance + "원");
+        //System.out.printf("%.0f원 입금완료, ", amount);
+        //System.out.printf("현재잔액 : %.0f원\n", balance);
     }
     public void withdraw(double amount){ // 출금
-        balance -= amount;
-        System.out.printf("%.0f원 출금완료, ", amount);
-        System.out.printf("현재잔액 : %.0f원\n", balance);
+        if(balance < amount){
+            System.out.println("출금액이 현재잔액보다 많아서 프로그램을 종료합니다.");
+            System.exit(-1);/*************************************************************/
+        }
+        this.balance -= amount;
+        System.out.print((int)amount + "원 출금완료, ");
+        System.out.println("현재잔액 : " + (int)balance + "원");
+        //System.out.printf("%.0f원 출금완료, ", amount);
+        //System.out.printf("현재잔액 : %.0f원\n", balance);
     }
     public void getBalance(){//getter 이용 가능
-        System.out.printf("현재잔액 : %.0f원", balance);
+        System.out.println("현재잔액 : " + (int)balance + "원");
+        //System.out.printf("현재잔액 : %.0f원", balance);
     }
 
 }
@@ -51,3 +58,4 @@ public class Main {
         ba.getBalance();
     }
 }
+
