@@ -1,0 +1,36 @@
+class AThread extends Thread{
+    @Override
+    public void run(){
+        for(int i = 1; i <= 10; i++){
+            System.out.println(i);
+        }
+        String name = Thread.currentThread().getName();
+        System.out.println("현재 스레드 이름 : " + name);
+    }
+}
+class BThread implements Runnable{
+    @Override
+    public void run(){
+        for(int i = 'A'; i <= 'Z'; i++){
+            System.out.println((char)i);
+        }
+        String name = Thread.currentThread().getName();
+        System.out.println("현재 스레드 이름 : " + name);
+    }
+}
+
+public abstract class Main
+{
+    public static void main(String[] args) {
+        String name = Thread.currentThread().getName(); // main
+        System.out.println("현재 스레드 이름 : " + name);
+        // 상속받은 스레드 실행법
+        AThread at = new AThread();
+        at.start();
+        // 구현 받은 스레드 실행법
+        BThread bt = new BThread();
+        Thread t = new Thread(bt);
+        t.start();
+    }
+
+}
