@@ -1,0 +1,38 @@
+class SumThread extends Thread{
+    private long sum;
+
+    // Getter, Setter
+    public long getSum() {
+        return sum;
+    }
+
+    public void setSum(long sum) {
+        this.sum = sum;
+    }
+
+    // 필수 메소드
+
+    @Override
+    public void run() {
+        for(int i = 0; i <= 100; i ++){
+            sum += i;
+        }
+        System.out.println(sum);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+
+        SumThread st = new SumThread();
+        st.start();
+        // 기초 스레드 동기화!!!
+        try {
+            st.join();
+            st.setDaemon(true); // 혹시 main 스레드가 종료되면 해당 스레드도 같이 종룔
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println("1 ~ 100까지 합 : " + st.getSum()); //Main이 종료하면 바로 출력됨
+    }
+}
