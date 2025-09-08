@@ -53,3 +53,4 @@ public class Main
                 .build();
     }
 }
+//static, abstract 특징 정리
