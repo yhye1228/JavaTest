@@ -1,3 +1,15 @@
+/*
+문제 : 동물 울음소리 다형성
+설명: Animal 클래스를 만들고 makeSound() 메서드를 정의하세요.
+Dog, Cat, Cow 클래스를 상속받아 각각 다른 울음소리를 출력하게 하세요.
+추가 조건: ArrayList<Animal>에 여러 동물을 넣고 반복문으로 울음소리를 출력해 보세요.
+--------------------------------
+멍멍!
+야옹~
+음메~
+ */
+
+
 import java.util.ArrayList;
 import java.util.List;
 class Animal{
