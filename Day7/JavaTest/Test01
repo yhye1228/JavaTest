@@ -1,0 +1,30 @@
+public class Main
+{
+    public static void myPrint(){
+        System.out.println("Hello World");
+    }
+    public void myPrint2(){
+        System.out.println("Hello World2");
+    }
+    public String func1(){
+        System.out.println("func1");
+        return "반갑습니다.";
+    }
+    public int func2(int value, int value2){
+        System.out.println("func2");
+        return value + 1;
+    }
+    public static void main(String[] args)
+    {
+        myPrint();
+        Main m = new Main();    //static 아닌 메소드 호출방법
+        m.myPrint2();
+
+        m.func1();
+        String str = m.func1();
+        System.out.println(str);
+
+        int result1 = m.func2(3, 111);
+        System.out.println(result1);
+    }
+}
