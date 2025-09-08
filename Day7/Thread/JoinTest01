@@ -1,3 +1,4 @@
+// 기다림
 class SumThread extends Thread{
     private long sum;
 
