@@ -12,13 +12,14 @@ public class Main {
             System.out.print(i + " \t");
         }
         System.out.println();
+/*****************************************************************************/
         Collections.sort(list);
         for(String i : list){
             System.out.print(i + " \t");
         }
         System.out.println();
-
         int[] arr = {5,4,3,2,1};
+/*****************************************************************************/
         Arrays.sort(arr);
         for(int i: arr){
             System.out.print(i + "\t");
