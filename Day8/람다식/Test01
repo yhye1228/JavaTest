@@ -6,9 +6,35 @@ public class Main {
             System.out.println("Hello World~!!");
         };
         // 실행
+        //mi.method();
+
+        mi = () -> {
+            System.out.println("method call 2");
+            System.out.println("mehtod call 3");
+        };
+        //mi.method();
+
+        mi = () -> System.out.println("중괄호 생략가능");
+        System.out.println("괄호 없음");
+        //mi.method();
+
+        mi = new MyInterface() {
+            @Override
+            public void method() {
+                System.out.println("method call 4");
+            }
+        };
         mi.method();
     }
 }
+
+//Hello World~!!
+//method call 2
+//mehtod call 3
+//괄호 없음
+//중괄호 생략가능
+//method call 4(마지막만 출력됨)
+
 =====================================================
 public interface MyInterface {
     void method();
