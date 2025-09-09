@@ -4,7 +4,7 @@ class WorkThread implements Runnable{
     @Override
     public void run() {
         //1~100 출력
-        for(int i = 11; i <= 100; i++){
+        for(int i = 1; i <= 100; i++){
             System.out.print(i + " ");
         }
     }
