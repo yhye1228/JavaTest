@@ -16,6 +16,6 @@ public class Main {
         for(Map.Entry<String, Integer> e : sortedMap.entrySet()){
             System.out.println("\t" + e.getKey() + " : "+e.getValue());
         }
-
+        // 해쉬맵 사용과 정렬을 위한 변환
     }
 }
