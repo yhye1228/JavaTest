@@ -1,0 +1,27 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+
+//
+public class Main {
+    public static void main(String[] args) {
+        List<String> list = Arrays.asList("홍길동", "이순신", "강감찬");
+
+        for(String i : list){
+            System.out.print(i + " \t");
+        }
+        System.out.println();
+        Collections.sort(list);
+        for(String i : list){
+            System.out.print(i + " \t");
+        }
+        System.out.println();
+
+        int[] arr = {5,4,3,2,1};
+        Arrays.sort(arr);
+        for(int i: arr){
+            System.out.print(i + "\t");
+        }
+    }
+}
