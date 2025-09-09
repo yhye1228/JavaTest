@@ -1,0 +1,29 @@
+import java.util.Stack;
+
+class Coin {
+    private int value;
+
+    public Coin(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Stack<Coin> coinbox = new Stack<>();
+
+        coinbox.push(new Coin(100));
+        coinbox.push(new Coin(10));
+        coinbox.push(new Coin(500));
+        coinbox.push(new Coin(10));
+        
+        while(!coinbox.empty()){
+            Coin coin = coinbox.pop();
+            System.out.println("꺼내온 동전 : " + coin.getValue() + "원");
+        }//입력 반대로 출력됨
+    }
+}
