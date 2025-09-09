@@ -19,9 +19,8 @@ public class Main {
         };
         //mi.method(8);
 
-        mi = (x) -> {
-            System.out.println(x * 8);
-        };
+        mi = (x) -> System.out.println(x * 8);
+
         mi.method(8);
     }
 }
