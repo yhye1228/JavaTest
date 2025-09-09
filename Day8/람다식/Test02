@@ -1,0 +1,27 @@
+public interface MyInterface
+{
+    public void method(int x);
+}
+============================================
+public class Main {
+    public static void main(String[] args) {
+
+        MyInterface mi;
+
+        mi = (x) -> {
+            int result = x * 5;
+            System.out.println(result);
+        };
+        //mi.method(5);
+
+        mi = (x) -> {
+            System.out.println(x * 5);
+        };
+        //mi.method(8);
+
+        mi = (x) -> {
+            System.out.println(x * 8);
+        };
+        mi.method(8);
+    }
+}
