@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        // 구현
+        MyInterface mi;
+        mi = () -> {
+            System.out.println("Hello World~!!");
+        };
+        // 실행
+        mi.method();
+    }
+}
+=====================================================
+public interface MyInterface {
+    void method();
+}
