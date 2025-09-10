@@ -40,6 +40,7 @@ public class Main {
             String name = s.getName();
             int score = s.getScore();
             System.out.println(name + " : " + score);
+            //System.out.println(s.getName + " : " + s.getScore);
         });
     }
 }
