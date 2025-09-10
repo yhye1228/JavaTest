@@ -1,0 +1,51 @@
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+//객체간 비교를 위해서 Comparable 인터페이스를 구현하기
+class Student implements Comparable<Student>{
+    private String student;
+    private int score;
+
+    public Student(String student, int score) {
+        this.student = student;
+        this.score = score;
+    }
+
+    public String getStudent() {
+        return student;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    //객체간의 비교는 기준을 만들어 줘야 함.
+    @Override
+    public int compareTo(Student st) {
+        return Integer.compare(score, st.score);
+    }// 음수 : 작은값, 0이면 같다, 양수 : 크다.
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // 정수
+        IntStream stream = Arrays.stream(new int[]{5,4,3,2,1});
+
+        stream.sorted().forEach(i -> System.out.print(i + " "));
+        System.out.println();
+
+        List<Student> list = Arrays.asList(
+            new Student ("홍길동", 50),
+            new Student ("이순신", 100),
+            new Student ("강감찬", 95)
+        );
+        //오름차순
+        list.stream().sorted().forEach(s -> System.out.println(s.getStudent() + " : " + s.getScore()));
+        System.out.println("내림차순");
+        //내림차순
+        list.stream().sorted(Comparator.reverseOrder())
+                .forEach(s -> System.out.println(s.getScore()));
+    }
+}
