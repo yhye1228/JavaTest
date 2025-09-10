@@ -21,6 +21,7 @@
 
 
     <Button fx:id="btnExcute" text="연산" onAction="#onBtnResult"/>
+<!--또는 <Button text="연산" onAction="#onBtnResult"/>-->
 </HBox>
 =======================================================================
 package com.example.fxplusapp;
