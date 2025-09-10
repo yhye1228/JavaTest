@@ -1,0 +1,49 @@
+import java.util.Arrays;
+import java.util.List;
+
+class Student{
+    private String name;
+    private int score;
+
+    public Student(String name, int score) {
+        this.name = name;
+        this.score = score;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+}
+
+public class Main {
+    public static <doubld> void main(String[] args) {
+        List<Student> list = Arrays.asList(
+                new Student("홍길동", 10),
+                new Student("이순신", 20),
+                new Student("강감찬", 30)
+        );
+        //총점, 평균을 구해보자.
+        double avg = list.stream()
+                    .mapToInt(Student :: getScore)  //Student 클래스의 getScore 메서드를 참조(:: 연산자는 특정 메서드를 참조)
+                //(Student s) -> s.getScore()
+                    .average()
+                    .getAsDouble();
+        int total = list.stream()
+                   .mapToInt(Student :: getScore)   //Student 클래스의 getScore 메서드를 참조
+                   .sum();
+        System.out.println("총합 : " + total);
+        System.out.println("평균점수 : " + avg);
+    }
+}
