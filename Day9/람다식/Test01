@@ -1,0 +1,28 @@
+interface MyInterface{
+    public int runMethod(int x, int y);
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyInterface mi;
+        //mi = (x, y) -> {return x * y;};//return이 있으면 중괄호 생략 안됨
+        mi = (x, y) -> x * y;
+        System.out.println(mi.runMethod(5,6));
+        mi = (x, y) -> x * y;
+        
+        //람다식
+        new Thread(() -> {for(int i = 1; i<=100; i++){ System.out.print(i + "\t");
+        if(i%10 == 0) {System.out.println();}}}).start();
+
+//        Runnable runnable = () -> {
+//            for(int i = 1; i <= 100; i++){
+//                System.out.print(i + "\t");
+//                if(i%10 == 0){
+//                    System.out.println();
+//                }
+//            }
+//        };
+//        Thread t1 = new Thread(runnable)
+//        t1.start();
+    }
+}
