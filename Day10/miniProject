@@ -1,6 +1,7 @@
 //http://www.verthasys.co.kr/coding/에 올리기
 //crud도 객체화 하기
 
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -32,6 +33,18 @@ class Address{
 
     public void setName(String name) {
         this.name = name;
+    }
+    public static class insert{
+
+    }
+    public static class delete{
+
+    }
+    public static class edit{
+
+    }
+    public static class search{
+
     }
 }
 public class Main {
@@ -102,18 +115,21 @@ public class Main {
                     System.out.print("원하는 데이터의 ADDR_ID를 입력해주세요 : ");
 
                     int eId = sc.nextInt();
+                    int index = 0;
                     String dName = "";
                     String dHp = "";
-                    for(Address ad : list){
+                    for(int i = 0; i < list.size(); i++){
+                        Address ad = list.get(i);
                         if(ad.getAddr_Id() == eId){
                             dName = ad.getName();
                             dHp = ad.getHp();
+                            index = i;
                         }
                     }
                     //삭제 후 입력
-                    list.remove(eId-1);
+                    list.remove(index);
                     Address eAddr = new Address();
-                    eAddr.setAddr_Id(eId);
+                    eAddr.setAddr_Id(index);
                     sc.nextLine();
                     System.out.print("이름을 입력해주세요 : ");
                     name = sc.nextLine();
@@ -121,7 +137,10 @@ public class Main {
                     System.out.print("전화번호를 입력해주세요 : (예시:010-1111-1111)");
                     hp = sc.nextLine();
                     eAddr.setHp(hp);
-                    list.add(eId, eAddr);
+                    //마지막이면
+                    //list.add(eAddr);
+                    //마지막이 아니면
+                    //list.add(index,eAddr);
                     //System.out.println("4");
                     break;
             }
@@ -131,3 +150,4 @@ public class Main {
 
     }
 }
+
