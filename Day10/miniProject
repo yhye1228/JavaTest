@@ -1,0 +1,133 @@
+//http://www.verthasys.co.kr/coding/에 올리기
+//crud도 객체화 하기
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Address{
+    private int addr_id;
+    private String name;
+    private String hp;
+
+    public int getAddr_Id() {
+        return addr_id;
+    }
+
+    public void setAddr_Id(int addr_id) {
+        this.addr_id = addr_id;
+    }
+
+    public String getHp() {
+        return hp;
+    }
+
+    public void setHp(String hp) {
+        this.hp = hp;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        List<Address> list = new ArrayList<Address>();
+        Scanner sc = new Scanner(System.in);
+
+        //무한반복(while)
+        while(true){
+            for(int i=0; i <= 30; i++){
+                System.out.print("-");
+            }
+            System.out.println();
+            System.out.println("1. 데이터 삽입");
+            System.out.println("2. 데이터 삭제");
+            System.out.println("3. 데이터 조회");
+            System.out.println("4. 데이터 수정\n");
+
+            System.out.print("메뉴 : ");
+
+            int num = sc.nextInt();
+            switch(num){
+                case 1:
+                    //입력
+                    Address addr = new Address();
+                    int addr_id;
+                    String name, hp;
+                    System.out.print("ID를 입력해주세요 : ");
+                    addr_id = sc.nextInt();
+                    sc.nextLine();  //개행문자 제거용
+                    addr.setAddr_Id(addr_id);
+                    System.out.print("이름을 입력해주세요 : ");
+                    name = sc.nextLine();
+                    addr.setName(name);
+                    System.out.print("전화번호를 입력해주세요 : (예시:010-1111-1111)");
+                    hp = sc.nextLine();
+                    addr.setHp(hp);
+                    list.add(addr);
+                    //저장확인
+                    System.out.println("===== 입력된 정보 =====");
+                    System.out.println("ID: " + addr.getAddr_Id());
+                    System.out.println("이름: " + addr.getName());
+                    System.out.println("전화번호: " + addr.getHp());
+
+                    //System.out.println("1");
+                    break;
+                case 2:
+                    //삭제
+                    System.out.print("삭제할 ADDR_ID를 입력해주세요 : ");
+                    int dId = sc.nextInt();
+                    list.remove(dId-1);
+                    break;
+                case 3:
+                    //조회
+                    System.out.print("ADDR_ID\t ");
+                    System.out.print("NAME\t\t");
+                    System.out.print("HP\t\n");
+                    for(Address ad : list ){
+                        System.out.print(ad.getAddr_Id() + "\t\t");
+                        System.out.print(ad.getName() + "\t");
+                        System.out.print(ad.getHp() + "\t\n");
+                    }
+                    System.out.println();
+                    //System.out.println("3");
+                    break;
+                case 4:
+                    //데이터 수정
+                    System.out.print("원하는 데이터의 ADDR_ID를 입력해주세요 : ");
+
+                    int eId = sc.nextInt();
+                    String dName = "";
+                    String dHp = "";
+                    for(Address ad : list){
+                        if(ad.getAddr_Id() == eId){
+                            dName = ad.getName();
+                            dHp = ad.getHp();
+                        }
+                    }
+                    //삭제 후 입력
+                    list.remove(eId-1);
+                    Address eAddr = new Address();
+                    eAddr.setAddr_Id(eId);
+                    sc.nextLine();
+                    System.out.print("이름을 입력해주세요 : ");
+                    name = sc.nextLine();
+                    eAddr.setName(name);
+                    System.out.print("전화번호를 입력해주세요 : (예시:010-1111-1111)");
+                    hp = sc.nextLine();
+                    eAddr.setHp(hp);
+                    list.add(eId, eAddr);
+                    //System.out.println("4");
+                    break;
+            }
+
+        }//end while
+
+
+    }
+}
